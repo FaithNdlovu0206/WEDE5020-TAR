@@ -17,7 +17,6 @@
 <body>
 <header><img src="Images/logo.png.jpeg" alt="Tembisa Animal Rescue About Us Tembisa Team"><h1>TEMBISA ANIMAL RESCUE</h1></header>
 <nav>
-<nav>
 <a href="home.html">Home</a>
 <a href="about.html">About Us</a>
 <a href="services.html">Services</a>
@@ -25,7 +24,6 @@
 <a href="adopt.html">Adopt</a>
 <a href="enquiry.html">Enquiry</a>
 <a href="contact.html">Contact Us</a>
-</nav>
 </nav>
 <main>
 <h2>About Tembisa Animal Rescue</h2>
@@ -87,17 +85,31 @@
 <li><strong>10 Dec 2026:</strong> Vaccination Drive - Free checkups</li>
 </ul>
 </div>
-<footer><p>© 2026 TEMBISA ANIMAL RESCUE | ST10528024</p></footer>
+
+<footer>
+<p>© 2026 TEMBISA ANIMAL RESCUE | ST10528024</p>
+<p id="liveTimestamp" style="text-align:center; font-size:13px; background:#1a2a3a; color:white; padding:8px; margin:0; margin-top:10px;"></p>
+</footer>
+
 <script>
 function showTab(tabName){
-  // Hide all contents
   document.querySelectorAll('.tab-content').forEach(c=>c.classList.remove('active'));
   document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
-  // Show selected
   document.getElementById(tabName).classList.add('active');
   event.target.classList.add('active');
 }
 </script>
 <script src="script.js"></script>
+
+<!-- TIMESTAMP -->
+<script>
+  function updateTimestamp() {
+    const now = new Date();
+    document.getElementById('liveTimestamp').textContent = "Last updated: " + now.toLocaleString('en-GB') ;
+  }
+  updateTimestamp();
+  setInterval(updateTimestamp, 1000);
+</script>
+
 </body>
 </html>

@@ -59,7 +59,23 @@
 <li><strong>10 Dec 2026:</strong> Vaccination Drive - Free checkups</li>
 </ul>
 </div>
-<footer><p>© 2026 TEMBISA ANIMAL RESCUE | ST10528024</p></footer>
+
+<footer>
+<p>© 2026 TEMBISA ANIMAL RESCUE | ST10528024</p>
+<p id="liveTimestamp" style="text-align:center; font-size:13px; background:#1a2a3a; color:white; padding:8px; margin:0; margin-top:10px;"></p>
+</footer>
+
 <script src="script.js"></script>
+
+<!-- LIVE TIMESTAMP -->
+<script>
+  function updateTimestamp() {
+    const now = new Date();
+    document.getElementById('liveTimestamp').textContent = "Last updated: " + now.toLocaleString('en-GB') ;
+  }
+  updateTimestamp();
+  setInterval(updateTimestamp, 1000);
+</script>
+
 </body>
 </html>

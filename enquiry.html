@@ -91,13 +91,17 @@ button.submit{background:#1a4d2e;color:white;padding:12px 20px;border:none;borde
 <div style="background:#fdfaf6;padding:15px;border-radius:12px;margin:20px;border-left:4px solid #ff9f1c;">
 <h3>📅 Adoption & Fundraising Events</h3>
 <ul>
-<li><strong>15 Nov 2026:</strong> Adoption Day - Tembisa Plaza 09:00-14:00</li>
-<li><strong>30 Nov 2026:</strong> Fundraising Walk - R50 entry, all dogs welcome</li>
-<li><strong>10 Dec 2026:</strong> Vaccination Drive - Free checkups</li>
+<li><strong>15 Nov 2026:</strong> Adoption Day - Tembisa Plaza 09:00-14:00 - Cost: FREE - Availability: Available</li>
+<li><strong>30 Nov 2026:</strong> Fundraising Walk - R50 entry, all dogs welcome - Cost: R50 - Availability: Limited 10 slots</li>
+<li><strong>10 Dec 2026:</strong> Vaccination Drive - Free checkups - Cost: R0 - Availability: Available</li>
 </ul>
 </div>
 
-<footer><p>&copy; 2026 TEMBISA ANIMAL RESCUE | ST10528024</p></footer>
+<footer>
+<p>&copy; 2026 TEMBISA ANIMAL RESCUE | ST10528024</p>
+<p id="liveTimestamp" style="text-align:center; font-size:13px; background:#1a2a3a; color:white; padding:8px; margin:0; margin-top:10px;"></p>
+</footer>
+
 <script>
 function validateEnquiry(e){
  e.preventDefault();
@@ -152,6 +156,17 @@ function validateEnquiry(e){
  return false;
 }
 </script>
+
+<!-- TIMESTAMP SCRIPT -->
+<script>
+  function updateTimestamp() {
+    const now = new Date();
+    document.getElementById('liveTimestamp').textContent = "Last updated: " + now.toLocaleString('en-GB') ;
+  }
+  updateTimestamp();
+  setInterval(updateTimestamp, 1000);
+</script>
+
 <script src="script.js"></script>
 </body>
 </html>
