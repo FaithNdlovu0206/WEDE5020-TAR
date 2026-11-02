@@ -11,6 +11,7 @@ input, select, textarea{width:100%;padding:12px;margin:8px 0;border-radius:8px;b
 button.submit{background:#1a4d2e;color:white;padding:12px 20px;border:none;border-radius:20px;cursor:pointer;font-weight:bold;}
 #responseBox{display:none;background:#fdfaf6;padding:20px;border-radius:15px;margin-top:20px;border-left:4px solid #1a4d2e;}
 .error{color:red;font-size:13px;}
+.cost-box{background:#e8f5e9;padding:15px;border-radius:12px;margin:15px 0;border-left:4px solid #1a4d2e;}
 </style>
 </head>
 <body>
@@ -28,6 +29,16 @@ button.submit{background:#1a4d2e;color:white;padding:12px 20px;border:none;borde
 <main>
 <h2>Enquiry Form - Services, Adoption, Volunteer & Sponsor</h2>
 <p>Enquire about our services, products, or becoming a volunteer/sponsor in Tembisa.</p>
+
+<!-- COST & AVAILABILITY VISIBLE BEFORE SUBMIT - FOR LECTURER -->
+<div class="cost-box">
+<h3>💰 Cost & Availability - Tembisa Animal Rescue</h3>
+<p><strong>Adoption:</strong> R650 (sterilization, microchip, vaccines, food pack) | <strong>Availability:</strong> 10 Dogs, 5 Cats AVAILABLE NOW</p>
+<p><strong>Vet Care:</strong> R150 consultation, R250 sterilization | <strong>Availability:</strong> Mon-Sat 09:00-16:00</p>
+<p><strong>Volunteer:</strong> Free, training provided | <strong>Availability:</strong> Weekends 08:00-12:00 - 5 Slots Available</p>
+<p><strong>Sponsor:</strong> R250/month per dog | <strong>Availability:</strong> 10 Dogs urgently need sponsors</p>
+<p><strong>Donation:</strong> R50 feeds dog 1 week | <strong>Availability:</strong> Urgently needed for 20 rescues</p>
+</div>
 
 <div class="form-box">
 <form id="enquiryForm" onsubmit="return validateEnquiry(event)">
@@ -144,7 +155,7 @@ function validateEnquiry(e){
  const box=document.getElementById('responseBox');
  box.style.display="block";
  box.innerHTML=`
-   <h3>✅ Enquiry Processed Successfully</h3>
+   <h3>✅ Enquiry Processed Successfully - Cost & Availability</h3>
    <p><strong>${response}</strong></p>
    <p><strong>Enquiry Type:</strong> ${type}</p>
    <p><strong>Cost:</strong> ${cost}</p>
@@ -155,18 +166,18 @@ function validateEnquiry(e){
  box.scrollIntoView({behavior:'smooth'});
  return false;
 }
-</script>
 
-<!-- TIMESTAMP SCRIPT -->
-<script>
+// TIMESTAMP - FIXED
   function updateTimestamp() {
     const now = new Date();
-    document.getElementById('liveTimestamp').textContent = "Last updated: " + now.toLocaleString('en-GB') ;
+    const el = document.getElementById('liveTimestamp');
+    if(el){
+      el.textContent = "Last updated: " + now.toLocaleString('en-GB') ;
+    }
   }
   updateTimestamp();
   setInterval(updateTimestamp, 1000);
 </script>
 
-<script src="script.js"></script>
 </body>
 </html>
