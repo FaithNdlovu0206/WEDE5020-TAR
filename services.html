@@ -1,78 +1,108 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Services - TEMBISA ANIMAL RESCUE</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services - Animal Rescue, Vet Care, Adoption & Education in Tembisa</title>
+    <meta name="description" content="Tembisa Animal Rescue services: 24/7 animal rescue, veterinary care, adoption services, community education workshops and volunteering in Tembisa.">
+    <link rel="stylesheet" href="CSS/style.css">
 </head>
- <link rel="stylesheet" href="CSS/style.css">
 <body>
+<header><img src="Images/logo.png.jpeg" alt="TAR Logo"><h1>TEMBISA ANIMAL RESCUE</h1></header>
+<nav>
+    <a href="home.html">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="services.html">Services</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="adopt.html">Adopt</a>
+    <a href="enquiry.html">Enquiry</a>
+    <a href="contact.html">Contact Us</a>
+</nav>
+<main>
+    <h2>Our Services in Tembisa</h2>
+    <img src="Images/services2.png.jpeg" alt="Veterinarian helping a rescued dog at Tembisa Animal Rescue" style="width:100%;height:300px;object-fit:cover;border-radius:15px;">
+    
+    <input type="text" id="searchServices" placeholder="Search services... e.g. rescue, vet, adoption" style="width:100%; padding:12px; border-radius:8px; border:1px solid #ccc; margin:20px 0;">
 
-    <header>
-        <img src="Images/logo.png.jpeg" alt="TAR Logo" width="100">
-        <h1>TEMBISA ANIMAL RESCUE</h1>
-    </header>
+    <section class="service-item" style="background:#fff;padding:15px;border-radius:15px;margin:15px 0;">
+        <h3>1. Animal Rescue</h3>
+        <p>We respond to calls about stray, injured, and abandoned animals in Tembisa. Safe transport to shelter.</p>
+    </section>
+    <section class="service-item" style="background:#fff;padding:15px;border-radius:15px;margin:15px 0;">
+        <h3>2. Veterinary Care & Rehabilitation</h3>
+        <p>Health check, vaccinations, deworming, treatment. Partner with local vets to nurse back to health.</p>
+    </section>
+    <section class="service-item" style="background:#fff;padding:15px;border-radius:15px;margin:15px 0;">
+        <h3>3. Adoption Services</h3>
+        <p>Screen adopters and match with perfect pet. Includes sterilization, microchip, starter food pack.</p>
+        <a href="adopt.html"><button style="background:#1a4d2e;color:white;padding:10px 20px;border:none;border-radius:20px;cursor:pointer;margin-top:10px;">View Animals for Adoption</button></a>
+    </section>
 
-    <nav>
-        <a href="home.html">Home</a> | 
-        <a href="about.html">About Us</a> | 
-        <a href="services.html">Services</a> | 
-        <a href="gallery.html">gallery</a> | 
-        <a href="contact.html">Contact Us</a>
-    </nav>
+    <section style="background:#fff;padding:20px;border-radius:15px;margin:15px 0;border-left:4px solid #1a4d2e;">
+        <h3>Upcoming Services - Dynamically Loaded by JavaScript</h3>
+        <div id="dynamicServices">Loading services...</div>
+    </section>
+</main>
+<!-- DESIRED FUNCTIONALITY: WhatsApp + Donation + Calendar -->
+<style>
+#whatsappBtn{position:fixed;bottom:20px;right:20px;background:#25D366;color:white;padding:14px 18px;border-radius:50px;text-decoration:none;font-weight:bold;z-index:9999;box-shadow:0 4px 10px rgba(0,0,0,0.3);}
+#donateFloat{position:fixed;bottom:80px;right:20px;background:#1a4d2e;color:white;padding:12px 18px;border-radius:25px;border:none;cursor:pointer;font-weight:bold;z-index:9999;}
+</style>
 
-    <main>
-        <h2>Our Services</h2>
-        
-        <!-- SERVICES IMAGE -->
-        <img src="Images/services2.png.jpeg" alt="Vet helping a rescued dog" width="100%">
+<a id="whatsappBtn" href="https://wa.me/27634260592?text=Hi%20Tembisa%20Animal%20Rescue%20I%20want%20to%20adopt" target="_blank">💬 WhatsApp Us</a>
+<button id="donateFloat" onclick="document.getElementById('donateModal').style.display='flex'">❤️ Donate Securely</button>
 
-        <section>
-            <h3>1. Animal Rescue</h3>
-            <p>
-                We respond to calls about stray, injured, and abandoned animals in Tembisa. 
-                Our team provides safe transport to our shelter for care.
-            </p>
-        </section>
+<div id="donateModal" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.7);justify-content:center;align-items:center;z-index:10000;">
+<div style="background:white;padding:25px;border-radius:15px;max-width:350px;text-align:center;">
+<h3>Secure Donation</h3>
+<p>Capitec: 1234567890<br>PayPal: donate@tembisa-rescue.co.za<br>Every R50 feeds a dog!</p>
+<p><strong>Amount: R100 / R250 / R650 (Donation Fee)</strong></p>
+<button onclick="alert('Thank you! Payment secure via EFT/PayPal. Ref: Donations');document.getElementById('donateModal').style.display='none'" style="background:#1a4d2e;color:white;padding:10px 20px;border:none;border-radius:20px;cursor:pointer;">Pay Now Securely</button>
+<button onclick="document.getElementById('donateModal').style.display='none'" style="margin-left:10px;padding:10px;">Close</button>
+</div>
+</div>
 
-        <section>
-            <h3>2. Veterinary Care & Rehabilitation</h3>
-            <p>
-                Every animal gets a health check, vaccinations, deworming, and treatment. 
-                We partner with local vets to nurse them back to health.
-            </p>
-        </section>
-
-        <section>
-            <h3>3. Adoption Services</h3>
-            <p>
-                We screen potential adopters and match them with the perfect pet. 
-                Adoption includes sterilization, microchip, and starter food pack.
-            </p>
-            <a href="gallery.html">View Animals for Adoption</a>
-        </section>
-
-        <section>
-            <h3>4. Community Education</h3>
-            <p>
-                We run free workshops in Tembisa schools about responsible pet ownership, 
-                sterilization, and animal welfare.
-            </p>
-        </section>
-
-        <section>
-            <h3>5. Donations & Volunteering</h3>
-            <p>
-                We accept food, blankets, and monetary donations. 
-                Volunteers help with walking dogs, cleaning, and adoption days.
-            </p>
-            <a href="contact.html">Become a Volunteer</a>
-        </section>
-    </main>
-
-    <footer>
-        <p>© 2026 TEMBISA ANIMAL RESCUE | ST10528024</p>
-    </footer>
-
+<!-- Event Calendar -->
+<div style="background:#fdfaf6;padding:15px;border-radius:12px;margin:20px;border-left:4px solid #ff9f1c;">
+<h3>📅 Adoption & Fundraising Events</h3>
+<ul>
+<li><strong>15 Nov 2026:</strong> Adoption Day - Tembisa Plaza 09:00-14:00</li>
+<li><strong>30 Nov 2026:</strong> Fundraising Walk - R50 entry, all dogs welcome</li>
+<li><strong>10 Dec 2026:</strong> Vaccination Drive - Free checkups</li>
+</ul>
+</div>
+<footer><p>© 2026 TEMBISA ANIMAL RESCUE | ST10528024</p></footer>
+<script src="script.js"></script>
+<script>
+// Inline backup - loads upcoming services even if script.js fails
+document.addEventListener('DOMContentLoaded', function(){
+ const container = document.getElementById('dynamicServices');
+ if(container){
+  const services = [
+    {title:"4. Mobile Vet Clinic - NEW!", desc:"Free vaccines every Saturday at Tembisa Plaza - 09:00-12:00", cost:"Free"},
+    {title:"5. Dog Training Classes", desc:"Every Sunday 10:00 - Learn obedience, R100 per session", cost:"R100"},
+    {title:"6. Community Education", desc:"School visits in Tembisa - Teaching kids animal care - Book now", cost:"Free"},
+    {title:"7. Emergency Rescue 24/7", desc:"Call 0721234567 for injured strays - We respond in 1 hour in Tembisa", cost:"Donation-based"}
+  ];
+  container.innerHTML="";
+  services.forEach(s=>{
+    const div=document.createElement('div');
+    div.style="padding:12px;margin:8px 0;background:#fdfaf6;border-radius:10px;border:1px solid #ff9f1c;";
+    div.innerHTML=`<strong>${s.title}</strong><br>${s.desc}<br><span style="color:#1a4d2e;font-weight:bold;">Cost: ${s.cost}</span>`;
+    container.appendChild(div);
+  });
+  // Search filter
+  const search=document.getElementById('searchServices');
+  if(search){
+    search.addEventListener('input',function(){
+      const term=this.value.toLowerCase();
+      document.querySelectorAll('.service-item, #dynamicServices div').forEach(el=>{
+        el.style.display = el.textContent.toLowerCase().includes(term) ? 'block' : 'none';
+      });
+    });
+  }
+ }
+});
+</script>
 </body>
 </html>

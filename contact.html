@@ -1,50 +1,42 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us - TEMBISA ANIMAL RESCUE</title>
+    <link rel="stylesheet" href="CSS/style.css">
 </head>
- <link rel="stylesheet" href="CSS/style.css">
 <body>
-
     <header>
         <img src="Images/logo.png.jpeg" alt="TAR Logo" width="100">
         <h1>TEMBISA ANIMAL RESCUE</h1>
     </header>
-
-    <nav>
-        <a href="home.html">Home</a> | 
-        <a href="about.html">About Us</a> | 
-        <a href="services.html">Services</a> | 
-        <a href="gallery.html">gallery</a> | 
-        <a href="contact.html">Contact Us</a>
-    </nav>
-
+   <nav>
+<a href="home.html">Home</a>
+<a href="about.html">About Us</a>
+<a href="services.html">Services</a>
+<a href="gallery.html">Gallery</a>
+<a href="adopt.html">Adopt</a>
+<a href="enquiry.html">Enquiry</a>
+<a href="contact.html">Contact Us</a>
+</nav>
     <main>
         <h2>Contact Us</h2>
         <p>We'd love to hear from you! Report strays, adopt, donate, or volunteer.</p>
-
-        <!-- CONTACT INFO -->
         <section>
             <h3>Our Details</h3>
-            <p><b>Address:</b> 123 Rescue Street, Tembisa, 1632, Gauteng</p>
+            <p><b>Address:</b> 123 Rescue Street, Tembisa, 1632</p>
             <p><b>Phone:</b> 011 123 4567</p>
             <p><b>WhatsApp:</b> 072 987 6543</p>
             <p><b>Email:</b> info@tembisaanimalrescue.org</p>
-            <p><b>Hours:</b> Mon - Sat: 8:00am - 4:00pm | Sun: 9:00am - 1:00pm</p>
         </section>
-
-        <!-- CONTACT FORM -->
         <section>
             <h3>Send Us a Message</h3>
             <form>
                 <label>Name:</label><br>
                 <input type="text" name="name" required><br><br>
-
                 <label>Email:</label><br>
                 <input type="email" name="email" required><br><br>
-
                 <label>Subject:</label><br>
                 <select name="subject">
                     <option>Adoption Enquiry</option>
@@ -53,34 +45,48 @@
                     <option>Donation</option>
                     <option>Other</option>
                 </select><br><br>
-
                 <label>Message:</label><br>
                 <textarea name="message" rows="5" cols="40" required></textarea><br><br>
-
                 <input type="submit" value="Send Message">
             </form>
         </section>
-
-        <!-- MAP IMAGE -->
         <section>
             <div class="map-container" style="margin-top:20px;">
-    <iframe 
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3580.123456!2d28.0473!3d-26.2041!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sJohannesburg!5e0!3m2!1sen!2sza!4v1700000000000"
-        width="100%" 
-        height="300" 
-        style="border:0; border-radius:12px;" 
-        allowfullscreen="" 
-        loading="lazy" 
-        referrerpolicy="no-referrer-when-downgrade">
-    </iframe>
-    <p style="text-align:center; margin-top:8px; font-size:14px;">Find us in Johannesburg - The Animal Rescue (TAR)</p>
-</div>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3580.123456!2d28.0473!3d-26.2041!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sJohannesburg!5e0!3m2!1sen!2sza!4v1700000000000" width="100%" height="300" style="border:0; border-radius:12px;" allowfullscreen loading="lazy"></iframe>
+            </div>
         </section>
     </main>
+    <!-- DESIRED FUNCTIONALITY: WhatsApp + Donation + Calendar -->
+<style>
+#whatsappBtn{position:fixed;bottom:20px;right:20px;background:#25D366;color:white;padding:14px 18px;border-radius:50px;text-decoration:none;font-weight:bold;z-index:9999;box-shadow:0 4px 10px rgba(0,0,0,0.3);}
+#donateFloat{position:fixed;bottom:80px;right:20px;background:#1a4d2e;color:white;padding:12px 18px;border-radius:25px;border:none;cursor:pointer;font-weight:bold;z-index:9999;}
+</style>
 
+<a id="whatsappBtn" href="https://wa.me/27634260592?text=Hi%20Tembisa%20Animal%20Rescue%20I%20want%20to%20adopt" target="_blank">💬 WhatsApp Us</a>
+<button id="donateFloat" onclick="document.getElementById('donateModal').style.display='flex'">❤️ Donate Securely</button>
+
+<div id="donateModal" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.7);justify-content:center;align-items:center;z-index:10000;">
+<div style="background:white;padding:25px;border-radius:15px;max-width:350px;text-align:center;">
+<h3>Secure Donation</h3>
+<p>Capitec: 1234567890<br>PayPal: donate@tembisa-rescue.co.za<br>Every R50 feeds a dog!</p>
+<p><strong>Amount: R100 / R250 / R650 (Donation Fee)</strong></p>
+<button onclick="alert('Thank you! Payment secure via EFT/PayPal. Ref: Donation');document.getElementById('donateModal').style.display='none'" style="background:#1a4d2e;color:white;padding:10px 20px;border:none;border-radius:20px;cursor:pointer;">Pay Now Securely</button>
+<button onclick="document.getElementById('donateModal').style.display='none'" style="margin-left:10px;padding:10px;">Close</button>
+</div>
+</div>
+
+<!-- Event Calendar -->
+<div style="background:#fdfaf6;padding:15px;border-radius:12px;margin:20px 0;border-left:4px solid #ff9f1c;">
+<h3>📅 Adoption & Fundraising Events</h3>
+<ul>
+<li><strong>15 Nov 2026:</strong> Adoption Day - Tembisa Plaza 09:00-14:00</li>
+<li><strong>30 Nov 2026:</strong> Fundraising Walk - R50 entry, all dogs welcome</li>
+<li><strong>10 Dec 2026:</strong> Vaccination Drive - Free checkups</li>
+</ul>
+</div>
     <footer>
         <p>© 2026 TEMBISA ANIMAL RESCUE | ST10528024</p>
     </footer>
-
+<script src="script.js"></script>
 </body>
 </html>

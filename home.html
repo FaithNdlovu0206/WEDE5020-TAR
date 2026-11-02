@@ -1,30 +1,87 @@
-<doctype html>
-</html lang="en">
-</head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Home</title>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-   <link rel="stylesheet" href="CSS/style.css">
-    <body>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tembisa Animal Rescue - Rescue, Rehabilitate, Rehome | Adopt Dogs & Cats</title>
+    <meta name="description" content="Tembisa Animal Rescue rescues stray and abused dogs and cats in Tembisa, Gauteng. Adopt, volunteer or donate. Founded 2018. Adopt don't shop!">
+    <meta name="keywords" content="Tembisa animal rescue, adopt dogs Tembisa, cat adoption Gauteng, animal shelter Tembisa">
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+<header>
+    <img src="Images/logo.png.jpeg" alt="Tembisa Animal Rescue Logo - Dog and Cat">
+    <h1>TEMBISA ANIMAL RESCUE</h1>
 </header>
-<img src="Images/logo.png.jpeg"style= "width:85;height:75px;">
 <nav>
-<a href="home.html">Home|</a>
-<a href="about.html">About Us|</a>
-<a href="services.html">Services|</a>
-<a href="gallery.html">gallery|</a>
-<a href="contact.html">Contact Us|</a>
+<a href="home.html">Home</a>
+<a href="about.html">About Us</a>
+<a href="services.html">Services</a>
+<a href="gallery.html">Gallery</a>
+<a href="adopt.html">Adopt</a>
+<a href="enquiry.html">Enquiry</a>
+<a href="contact.html">Contact Us</a>
 </nav>
-</header>
 <main>
-<h1><u>Welcome to Tembisa Animal Rescue</i></u></h1>
-<h2>Every Stray Deserves a Home</h2>
-<video width="100%" height="650" controls>
+   <h2>Welcome to Tembisa Animal Rescue</h2>
+<h3 style="text-align:center; color:#1a4d2e; margin-bottom:20px;">Every Stray Deserves a Home</h3>
+<video width="100%" height="500" autoplay muted loop playsinline controls>
     <source src="Images/hero.png.mp4" type="video/mp4">
-    </video>
+</video>
+
+    <section id="faq">
+        <h3>Frequently Asked Questions - Interactive Accordion</h3>
+        <div class="accordion-item">
+            <h3 class="accordion-header">How much does adoption cost?</h3>
+            <div class="accordion-content"><p>R650 includes sterilization, microchip, vaccination and starter food pack.</p></div>
+        </div>
+        <div class="accordion-item">
+            <h3 class="accordion-header">Where are you located?</h3>
+            <div class="accordion-content"><p>123 Rescue Street, Tembisa, 1632. We serve entire Gauteng.</p></div>
+        </div>
+        <div class="accordion-item">
+            <h3 class="accordion-header">Can I volunteer?</h3>
+            <div class="accordion-content"><p>Yes! Help with dog walking, cleaning and adoption days. Apply via Contact page.</p></div>
+        </div>
+        <div class="accordion-item">
+    <h3 class="accordion-header">Can I donate?</h3>
+    <div class="accordion-content"><p>Yes! You can donate food, blankets or money. EFT: Tembisa Animal Rescue, Capitec 1234567890. Donate via Enquiry page or contact us. Every R50 feeds a dog for a week.</p>
+    <button id="donateBtn" style="padding:10px 20px;background:#1a4d2e;color:white;border:none;border-radius:20px;margin-top:10px;cursor:pointer;">Donate R100 Now</button>
+    <p id="donateMessage" style="font-weight:bold;color:#1a4d2e;margin-top:10px;"></p>
+    </div>
+</div>
+    </section>
 </main>
-<footer>&copy;ST10528024</footer>
-    </body>
-    </html>
+<!-- DESIRED FUNCTIONALITY: WhatsApp + Donation + Calendar -->
+<style>
+#whatsappBtn{position:fixed;bottom:20px;right:20px;background:#25D366;color:white;padding:14px 18px;border-radius:50px;text-decoration:none;font-weight:bold;z-index:9999;box-shadow:0 4px 10px rgba(0,0,0,0.3);}
+#donateFloat{position:fixed;bottom:80px;right:20px;background:#1a4d2e;color:white;padding:12px 18px;border-radius:25px;border:none;cursor:pointer;font-weight:bold;z-index:9999;}
+</style>
+
+<a id="whatsappBtn" href="https://wa.me/27634260592?text=Hi%20Tembisa%20Animal%20Rescue%20I%20want%20to%20adopt" target="_blank">💬 WhatsApp Us</a>
+<button id="donateFloat" onclick="document.getElementById('donateModal').style.display='flex'">❤️ Donate Securely</button>
+
+<div id="donateModal" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.7);justify-content:center;align-items:center;z-index:10000;">
+<div style="background:white;padding:25px;border-radius:15px;max-width:350px;text-align:center;">
+<h3>Secure Donation</h3>
+<p>Capitec: 1234567890<br>PayPal: donate@tembisa-rescue.co.za<br>Every R50 feeds a dog!</p>
+<p><strong>Amount: R100 / R250 / R650 (Donation Fee)</strong></p>
+<button onclick="alert('Thank you! Payment secure via EFT/PayPal. Ref: Donation');document.getElementById('donateModal').style.display='none'" style="background:#1a4d2e;color:white;padding:10px 20px;border:none;border-radius:20px;cursor:pointer;">Pay Now Securely</button>
+<button onclick="document.getElementById('donateModal').style.display='none'" style="margin-left:10px;padding:10px;">Close</button>
+</div>
+</div>
+
+<!-- Event Calendar -->
+<div style="background:#fdfaf6;padding:15px;border-radius:12px;margin:20px 0;border-left:4px solid #ff9f1c;">
+<h3>📅 Adoption & Fundraising Events</h3>
+<ul>
+<li><strong>15 Nov 2026:</strong> Adoption Day - Tembisa Plaza 09:00-14:00</li>
+<li><strong>30 Nov 2026:</strong> Fundraising Walk - R50 entry, all dogs welcome</li>
+<li><strong>10 Dec 2026:</strong> Vaccination Drive - Free checkups</li>
+</ul>
+</div>
+<footer><p>&copy; 2026 TEMBISA ANIMAL RESCUE | ST10528024</p></footer>
+<script src="script.js"></script>
+</body>
+</html>
 

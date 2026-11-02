@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://faithndlovu0206.github.io/WEDE5020-TAR/sitemap.xml
