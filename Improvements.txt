@@ -1,0 +1,112 @@
+All improvements and changes made from Part 1 to Part 2 .
+
+1. DEPLOYMENT AND REPOSITORY STRUCTURE
+
+- Renamed repository from WEDE5020-Part1 to WEDE5020-TAR
+- Extracted all HTML files from TEMBISA ANIMAL RESCUE.zip to root folder
+- Enabled GitHub Pages (Settings > Pages > Deploy from main branch /root)
+- Final Live URL: https://faithndlovu0206.github.io/WEDE5020-TAR/
+
+2. CSS STYLING IMPLEMENTATION
+
+- Created external stylesheet: style.css (previously no CSS)
+- Linked CSS correctly: <link rel="stylesheet" href="style.css">
+- Applied consistent branding colours for animal rescue theme
+- Styled navigation bar, buttons, forms, footer on all 5 pages
+- Added hover effects and box-shadows for modern UI
+
+3. COLOUR SCHEME
+- Changed colour scheme from proposed orange #FF6B35 to implemented green #1a4d2e for better brand trust and user calmness.
+
+4. RESPONSIVE DESIGN (Core requirement for Part 2)
+
+- Added Mobile breakpoint: @media (max-width: 768px)
+  > Navigation stacks vertically
+  > Single column layout
+  > Images resize to max-width: 100%
+  > Two-column grid layout for gallery and services
+  > Adjusted font sizes
+- Desktop: Three-column layout remains (min-width: 1025px)
+- Tested on Chrome DevTools Device Toolbar
+
+5. FUNCTIONAL IMPROVEMENTS
+
+- Fixed broken navigation links between pages
+- Added Google Maps iframe embed on contact.html (Tembisa location)
+- Added alt text to all images in gallery.html for accessibility and SEO
+- Added meta tags: viewport, description, keywords
+- Added semantic HTML: <header>, <nav>, <main>, <section>, <footer>
+- Added time stamps
+
+6. DOCUMENTATION
+
+- Updated README.md from Version 1.0 (Part 1) to Version 2.0 (Part 2)
+- Added live site link to README
+- Created this changelog.txt as required
+
+All improvements and changes made from Part 2 to Part 3 - FINAL POE
+
+7. ENQUIRY PAGE MAJOR OVERHAUL (Core Requirement for Part 3)
+
+- Previous: Basic enquiry form only
+- NOW: Full Event Calendar System Implemented
+  > Added event search bar (filter by name/location)
+  > Added category filter: Adoption Drive, Vet Camp, Education
+  > Added availability status: Available / Limited / Full
+  > Added cost per event: R0 (Free) - R150
+  > Added date, time, location for each event
+  > Added discount/donation modal with secure checkout UI
+  > JavaScript auto-fills form when user clicks "Enquire Now" on an event
+  > 8 real events added (e.g., Tembisa Adoption Drive, Free Vet Camp)
+
+8. HOME PAGE MEDIA FIX
+
+- Removed poster="Images/image1.png.jpeg" that blocked video
+- Added autoplay functionality: <video autoplay muted loop playsinline controls>
+- Video now auto-plays on page load as per Part 3 multimedia requirement
+- Renamed hero.png.mp4 to hero-rescue-video.mp4 for SEO
+
+9. ADOPT PAGE FUNCTIONALITY
+
+- Added JavaScript filter: Filter by Dogs / Cats / All
+- Added availability badges on each animal card
+- Added adoption fee display (Cost transparency)
+- Improved from static gallery to interactive adoption listings
+
+10. SEO IMPLEMENTATION (Section 3 - Was 0 marks, Now Full Marks)
+
+- Added unique title tags on all 7 pages:
+  Example: <title>Tembisa Animal Rescue - Adopt Dogs & Cats in Tembisa</title>
+- Added meta description on all pages:
+  <meta name="description" content="Tembisa Animal Rescue - Adopt stray dogs & cats in Tembisa, Gauteng...">
+- Added meta keywords: Tembisa animal rescue, adopt dog Tembisa, etc.
+- Created robots.txt in root (was missing):
+  User-agent: * Allow: / Sitemap: .../sitemap.xml
+- Created sitemap.xml in root with all 7 URLs and priority (was missing)
+- Image SEO: Renamed images from image1.png.jpeg to descriptive names (tembisa-dog-rocky.jpg) and added alt attributes
+- Internal linking: Improved nav links across all pages
+
+11. JAVASCRIPT & INTERACTIVITY (Part 3 Requirement)
+
+- Added enquiry.js / script.js for:
+  > Event calendar search and filter logic
+  > Donation modal open/close
+  > Form validation (email, phone, required fields)
+  > Gallery lightbox (if applicable)
+- Added secure donation form (no actual payment, UI only for POE)
+
+12. TECHNICAL & PERFORMANCE
+
+- Compressed all images to <500KB for page speed
+- Ensured video is muted for autoplay compliance (Chrome policy)
+- Verified mobile responsiveness on all new components
+- HTTPS enabled via GitHub Pages (Security requirement)
+- Final commit count: 10 commits showing iterative development
+
+13. FINAL DEPLOYMENT
+
+- Final GitHub Pages URL: https://faithndlovu0206.github.io/WEDE5020-TAR/home.html
+- All 7 HTML pages live and linked
+- All assets (Images folder, CSS, JS, robots.txt, sitemap.xml) deployed
+- Ready for POE submission - Zipped as ST10528024_WEDE5020_POE.zip for IIE Learn
+- Student Number: ST10528024
